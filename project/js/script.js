@@ -9,6 +9,7 @@
 //     })
 // })()
 
+
 async function getQuestions() {
     fetch('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy').then(res => {
         buildQuiz(res.json());
