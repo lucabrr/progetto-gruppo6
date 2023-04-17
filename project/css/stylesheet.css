@@ -1,0 +1,14 @@
+#sfondo {
+    background-image: url(../assets/bg.jpg);
+    background-size: 100%;
+}
+#logo img{
+    width: 200px;
+    margin: 80px
+}
+.title {
+    font-size: 60px;
+    font-family: 'Inter', sans-serif;
+    color: #00FFFF;
+    margin: 80px;
+}
