@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+
+
 #sfondo {
     background-image: url(../assets/bg.jpg);
     background-size: 100%;
@@ -8,7 +12,18 @@
 }
 .title {
     font-size: 60px;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Outfit', sans-serif;
     color: #00FFFF;
-    margin: 80px;
+    margin-left: 80px;
+}
+.yourExam {
+    display: block;
+    font-size: 60px;
+    font-weight: bolder;
+}
+.introduzione {
+    font-size: 16px;
+    color: #D20094;
+    
+
 }
