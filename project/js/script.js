@@ -10,8 +10,8 @@
 // })()
 
 async function getQuestions() {
-    fetch('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy').then(res => {
-        buildQuiz(res.json());
+    fetch('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy').then(async function(res) {
+        buildQuiz(await res.json());
     })
 }
 
@@ -21,7 +21,7 @@ function buildQuiz(arr) {
     //const target = document.getElementById('target');
     //let buttons = target.querySelectorAll('button');
     console.log(arr);
-    questionsArr = arr.result;
+    questionsArr = arr.results;
     console.log(questionsArr);
 }
 
