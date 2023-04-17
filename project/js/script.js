@@ -17,3 +17,7 @@ function buildQuiz(arr) {
     const target = document.getElementById('target');
     let buttons = target.querySelectorAll('button');
 }
+
+function test_da_marco() {
+    
+}
