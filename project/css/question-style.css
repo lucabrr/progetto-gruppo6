@@ -1,0 +1,53 @@
+#contenitoreDiTutto{
+    background-image: url(../assets/bg.jpg);
+    background-size: cover;
+}
+img{
+    height: 4vh;
+}
+#timer{
+    display: flex;
+    justify-content: end;
+    color: white;
+    font-size: 3em;
+    
+}
+#contenitoreDomanda{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 40px;
+
+}
+#contenitoreRisposte{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    
+}
+.risposte{
+
+    color: white;
+    font-size: 1.2em;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid white ;
+    border-radius: 10px;
+    background-color: rgba(114, 112, 112, 0.301);
+}
+.risposte:hover{
+    background-color: #AD0186;
+}
+#numeroDomande{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 1.6em;
+    
+}
+#domandeRimaste {
+    color: #AD0186;
+    font-size: 1.6rem;
+}
