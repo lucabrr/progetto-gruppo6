@@ -1,6 +1,7 @@
 #contenitoreDiTutto{
     background-image: url(../assets/bg.jpg);
     background-size: cover;
+    padding: 50px;
 }
 img{
     height: 4vh;
@@ -34,8 +35,11 @@ img{
     box-sizing: border-box;
     padding: 10px;
     border: 1px solid white ;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: rgba(114, 112, 112, 0.301);
+    margin: 10px;
+  
+    
 }
 .risposte:hover{
     background-color: #AD0186;
