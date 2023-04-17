@@ -1,18 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-#sfondo {
-    background-image: url('../assets/bg.jpg');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    padding: 50px 50px;
-}
-
-#logo img{
-    width: 20%;
-    margin-bottom: 90px;
-}
-
 .container {
     width: 60%;
     margin: 0 auto;
@@ -21,6 +9,19 @@
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
     letter-spacing: 0.5px;
+}
+
+#sfondo {
+    background-image: url('../assets/bg.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 50px 50px;
+    width: 100%;
+}
+
+#logo img{
+    width: 20%;
+    margin-bottom: 70px;
 }
 
 .title {
@@ -66,7 +67,7 @@
 }
 
 #consenso {
-    
+    cursor: pointer;
 }
 
 #acceptBtn {
@@ -74,8 +75,14 @@
     background-color: #00FFFF;
     font-size: large;
     font-weight: bold;
-    box-shadow: 1px 1px 9px 4px #00FFFF;
+    box-shadow: 1px 1px 9px 3px #00FFFF;
     border: none;
+    cursor: pointer;
+}
+
+#acceptBtn:hover {
+    color:rgb(62, 62, 62);
+    box-shadow: 1px 1px 9px 5px #00FFFF;
 }
 
 .subContent {
