@@ -1,17 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit&display=swap');
 
-#contenitoreDiTutto{
+#contenitoreDiTutto {
     background-image: url(../assets/bg.jpg);
     background-size: cover;
     font-family: 'Outfit', sans-serif;
 }
 
-img{
+img {
     height: 5vh;
     margin: 40px 0px 0px 40px;
 }
 
-#timer{
+#timer {
     display: flex;
     justify-content: end;
     color: white;
@@ -20,7 +20,7 @@ img{
     margin-right: 100px;
 }
 
-#contenitoreDomanda{
+#contenitoreDomanda {
     color: white;
     font-size: 48px;
     margin-bottom: 40px;
@@ -34,7 +34,7 @@ img{
     font-weight: bold;
 }
 
-#contenitoreRisposte{
+#contenitoreRisposte {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -49,23 +49,23 @@ img{
     margin-left: 30px;
 }
 
-.risposte{
+.risposte {
     color: white;
     font-size: 16px;
     box-sizing: border-box;
     padding: 18px 120px;
-    border: 1px solid white ;
+    border: 1px solid white;
     border-radius: 25px;
     background-color: rgba(114, 112, 112, 0.301);
     margin: 10px;
     font-family: 'Inter', sans-serif;
 }
 
-.risposte:hover{
+.risposte:hover {
     background: linear-gradient(to bottom, #d20094, #900080);
-}   
+}
 
-#numeroDomande{
+#numeroDomande {
     display: flex;
     justify-content: center;
     color: white;
