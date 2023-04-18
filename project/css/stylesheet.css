@@ -14,7 +14,7 @@
     padding: 50px 50px;
 }
 
-#logo img{
+#logo img {
     width: 20%;
     margin-bottom: 70px;
 }
@@ -75,13 +75,13 @@
 }
 
 #acceptBtn:hover {
-    color:rgb(62, 62, 62);
+    color: rgb(62, 62, 62);
     box-shadow: 1px 1px 9px 5px #00FFFF;
 }
 
 .subContent {
     width: 100%;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
 }
