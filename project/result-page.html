@@ -19,13 +19,17 @@
         </div>
         <div id="resultsContainer">
             <div>risposte corrette + percentuale</div>
-            <div>grafico + una p centrale di descrizione</div>
+            <div class="contenitoreDelChart" style=" width: 400px; height: 400px;">    
+                <canvas id="myChart"></canvas>
+            </div>
             <div>risposte errate + percentuale</div>
         </div>
         <div id="button">
             <button>RATE US</button>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/provaChart.js"></script>
 </body>
 
 </html>
