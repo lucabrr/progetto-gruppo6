@@ -18,6 +18,7 @@
 .review-container img {
     width: 20%;
     margin-bottom: 70px;
+    cursor: pointer;
 }
 
 .title {
@@ -65,6 +66,32 @@
 }
 
 .user-review {
-    width: 50%;
-    height: 1.5rem;
+    width: 70%;
+    height: 2rem;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #cb00b3;
+    padding: 0 30px;
+    color: white;
+    font-size: medium;
+    color:rgb(234, 234, 234);
+}
+
+.user-review:focus {
+    outline: none;
+}
+
+.customBtn {
+    padding: 15px 50px;
+    background-color: #00FFFF;
+    font-size: large;
+    font-weight: bold;
+    box-shadow: 1px 1px 9px 3px #00FFFF;
+    border: none;
+    cursor: pointer;
+}
+
+.customBtn:hover {
+    color:rgb(62, 62, 62);
+    box-shadow: 1px 1px 9px 5px #00FFFF;
 }
