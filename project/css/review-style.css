@@ -48,21 +48,27 @@
     margin-bottom: 40px;
 }
 
-.stars {
-    cursor: pointer;
+.stars-svg {
+    width: 47px;
+    height: 46px;
 }
 
-.stars:not(.stars:last-child) {
-    margin-right: 15px;
+.stars-svg-with-hover {
+    fill: #00FFFF;
+}
+
+.stars-svg:not(.stars-svg:last-child) {
+    margin-right: 5px;
 }
 
 .stars-container {
     display: flex;
     flex-direction: row;
+    margin-bottom: 50px;
 }
 
 .stars:hover {
-    color: black;
+    fill: #00FFFF;
 }
 
 .user-review {
@@ -75,6 +81,7 @@
     color: white;
     font-size: medium;
     color:rgb(234, 234, 234);
+    margin-bottom: 50px;
 }
 
 .user-review:focus {
