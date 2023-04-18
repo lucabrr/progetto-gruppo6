@@ -7,7 +7,7 @@
         if (checkB.checked) {
             location.href = "../questions.html"
         } else {
-            // show info about the checkBox
+            alert("Please check che condition checkbox !")
         }
     })
 })()
