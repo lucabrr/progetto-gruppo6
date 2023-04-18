@@ -1,7 +1,7 @@
 let starsArr = document.querySelectorAll('.stars-container svg'); //seleziono tutti gli svg (stelle)
 
 starsArr.forEach((star, i) => {
-    star.addEventListener('click', function() {
+    star.addEventListener('click', function () {
         setFill(i);
     })
 }) //imposto l'evento click a tutti gli svg (stelle) e gli dico di eseguire la funzione setFill quando appunto si clicca sulla stella. setFill prende come parametro il numero della stella, utile poi sotto per il ciclo
