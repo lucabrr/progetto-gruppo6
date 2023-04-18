@@ -12,6 +12,7 @@
     background-size: 100%;
     background-repeat: no-repeat;
     padding: 50px 50px;
+    height: 100vh;
 }
 
 #logo img {
@@ -84,4 +85,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+#contenuto{
+    margin-bottom: 200px;
 }
