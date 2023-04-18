@@ -1,24 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit&display=swap');
 
-#contenitoreDiTutto{
+#contenitoreDiTutto {
     background-image: url(../assets/bg.jpg);
     background-size: cover;
     height: 100vh;
 }
-img{
+
+img {
     height: 4vh;
     margin: 40px 0px 0px 40px
 }
-#timer{
+
+#timer {
     display: flex;
     justify-content: end;
     color: white;
     font-size: 3em;
     margin-bottom: 200px;
     margin-right: 100px;
-    
+
 }
-#contenitoreDomanda{
+
+#contenitoreDomanda {
     display: flex;
     justify-content: center;
     color: white;
@@ -27,34 +30,37 @@ img{
     font-family: 'Outfit', sans-serif;
 
 }
-#contenitoreRisposte{
+
+#contenitoreRisposte {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 400px;
+    margin-bottom: 150px;
 
-    
 }
-.risposte{
+
+.risposte {
 
     color: white;
     font-size: 16px;
     box-sizing: border-box;
     padding: 10px 45px;
-    border: 1px solid white ;
+    border: 1px solid white;
     border-radius: 20px;
     background-color: rgba(114, 112, 112, 0.301);
     margin: 10px;
     font-family: 'Inter', sans-serif;
-    
-  
-    
+
+
+
 }
-.risposte:hover{
-    background: linear-gradient(to bottom, #d20094, #900080); 
-    
-}   
-#numeroDomande{
+
+.risposte:hover {
+    background: linear-gradient(to bottom, #d20094, #900080);
+
+}
+
+#numeroDomande {
     display: flex;
     justify-content: center;
     color: white;
@@ -63,10 +69,11 @@ img{
     font-family: 'Inter', sans-serif;
 
 }
+
 #domandeRimaste {
     color: #AD0186;
     font-size: 16px;
-    
-    
-    
+
+
+
 }
