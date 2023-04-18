@@ -20,49 +20,44 @@ div img {
 #titlesContainer {
     text-align: center;
     font-family: 'Outfit', sans-serif;
-
+    margin-bottom: 50px;
 }
 
 #titlesContainer h3 {
     font-weight: bolder;
-    font-size: 35px;
-    margin-bottom: 5px;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
 #titlesContainer p {
-    font-size: 17px;
+    font-size: 20px;
 }
 
 #resultsContainer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 35px 25px 30px 25px;
+    margin: 35px 25px 70px 25px;
     font-family: 'Inter', sans-serif;
 }
 
 #button {
     display: flex;
     justify-content: center;
-
 }
-
 
 button {
     font-family: "Outfit", sans-serif;
-    font-size: 1rem;
+    font-size: 1.2rem;
     letter-spacing: 0.25px;
-    padding: 5px 30px;
+    padding: 10px 50px;
     border: 1px solid rgb(234, 234, 234);
-    font-weight: 500;
+    font-weight: bold;
     background-color: transparent;
     color: rgb(234, 234, 234);
     box-shadow: 1px 1px 5px 5px #9039c058;
-
 }
 
 button:hover {
-
     box-shadow: 1px 1px 9px 5px #00FFFF;
-
 }
