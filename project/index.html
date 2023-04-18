@@ -9,28 +9,33 @@
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
-    <div id="sfondo">
-    <div id="logo">
-        <img src="assets/epicode_logo.png" alt="logo">
-    </div>
-    <div id="contenuto">
-        <div>
-            <h3 class="title">Welcome to <span class="yourExam">your exam</span></h3>
-            <h4 class="introduzione">Instructions</h4>
-            <p>We don't expect most engineers to know the answers to all of these questions, so don't worry if you're unsure of a few of them.</p>
-            <ul>
-                <li>Each question is timed and can only be answered once.</li>
-                <li>Changing browers tab or opening other windows will invalidate the question.</li>
-                <li>This exam will take approx. 0-5 minutes</li>
-            </ul>
+    <div class="container">
+        <div id="sfondo">
+            <div id="logo">
+                <img src="assets/epicode_logo.png" alt="logo">
+            </div>
+            <div id="contenuto">
+                <div>
+                    <h3 class="title">Welcome to <span class="span-block subtitle">your exam</h3></span>
+                    <h4 class="instructions">Instructions</h4>
+                    <p class="mb-40">We don't expect most engineers to know the answers to all of these <span class="span-block">questions, so don't worry if you're unsure of a few of them.</p></span>
+                    <ul class="mb-40 myUl">
+                        <li>Each question is timed and can only be answered once.</li>
+                        <li>Changing browers tab or opening other windows will invalidate the question.</li>
+                        <li>This exam will take approx. 0-5 minutes</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="subContent mb-30">
+                <div>
+                    <input required id="consenso" type="checkbox">
+                    <label for="consenso">I promise to answer myself without help from anyone</label>
+                </div>
+                <button id="acceptBtn">PROCEED</button>
+            </div>
         </div>
     </div>
-    <div id="bottone">
-        <input required id="consenso" type="checkbox">
-        <label>I promise to answer myself without help from anyone</label>
-        <button>PROCEED</button>
-    </div>
-    </div>
-    <script src="js/script.js"></script>
+    <!-- <script src="js/welcome.js"></script> -->
+    <script src="js/quiz.js"></script>
 </body>
 </html>
