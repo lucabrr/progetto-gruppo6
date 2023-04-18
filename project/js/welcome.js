@@ -5,9 +5,7 @@
     const checkB = document.getElementById('consenso');
     btn.addEventListener('click', () => {
         if (checkB.checked) {
-            //getQuestions();
-            //do destroy
-            //call build function
+            location.href = "../questions.html"
         } else {
             // show info about the checkBox
         }
