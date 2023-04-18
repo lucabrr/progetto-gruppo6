@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Outfit&display=swap');
+
 #contenitoreDiTutto{
     background-image: url(../assets/bg.jpg);
     background-size: cover;
@@ -17,8 +19,9 @@ img{
     display: flex;
     justify-content: center;
     color: white;
-    font-size: 4rem;
+    font-size: 60px;
     margin-bottom: 40px;
+    font-family: 'Outfit', sans-serif;
 
 }
 #contenitoreRisposte{
@@ -31,13 +34,15 @@ img{
 .risposte{
 
     color: white;
-    font-size: 1.2em;
+    font-size: 16px;
     box-sizing: border-box;
     padding: 10px 45px;
     border: 1px solid white ;
     border-radius: 20px;
     background-color: rgba(114, 112, 112, 0.301);
     margin: 10px;
+    font-family: 'Inter', sans-serif;
+    
   
     
 }
@@ -49,10 +54,15 @@ img{
     display: flex;
     justify-content: center;
     color: white;
-    font-size: 1.6em;
-    
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    font-family: 'Inter', sans-serif;
+
 }
 #domandeRimaste {
     color: #AD0186;
-    font-size: 1.6rem;
+    font-size: 16px;
+    
+    
+    
 }
