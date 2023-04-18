@@ -2,21 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 .container {
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
-    padding: 40px 40px;
     color: rgb(234, 234, 234);
     font-family: 'Inter', sans-serif;
     box-sizing: border-box;
     letter-spacing: 0.5px;
-}
-
-#sfondo {
     background-image: url('../assets/bg.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
     padding: 50px 50px;
-    width: 100%;
 }
 
 #logo img{
@@ -46,7 +41,6 @@
     font-size: 60px;
     font-family: 'Outfit', sans-serif;
     font-weight: bold;
-    margin-bottom: 30px;
     color: white;
 }
 
@@ -86,6 +80,7 @@
 }
 
 .subContent {
+    width: 100%;
     display: flex;
     justify-content:space-between;
     align-items: center;
