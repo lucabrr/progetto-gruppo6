@@ -3,16 +3,19 @@
 #contenitoreDiTutto{
     background-image: url(../assets/bg.jpg);
     background-size: cover;
-    padding: 50px;
+    height: 100vh;
 }
 img{
     height: 4vh;
+    margin: 40px 0px 0px 40px
 }
 #timer{
     display: flex;
     justify-content: end;
     color: white;
     font-size: 3em;
+    margin-bottom: 200px;
+    margin-right: 100px;
     
 }
 #contenitoreDomanda{
@@ -28,7 +31,8 @@ img{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 400px;
+
     
 }
 .risposte{
