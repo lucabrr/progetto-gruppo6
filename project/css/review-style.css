@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.review-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(234, 234, 234);
+    font-family: 'Outfit', sans-serif;
+    box-sizing: border-box;
+    letter-spacing: 0.5px;
+    background-image: url('../assets/bg.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 50px 50px;
+}
+
+.review-container img {
+    width: 20%;
+    margin-bottom: 70px;
+}
+
+.title {
+    font-size: 60px;
+    font-family: 'Outfit', sans-serif;
+    color: white;
+    font-weight: bold;
+}
+
+.p-class {
+    font-size: 24px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.stars {
+    cursor: pointer;
+}
+
+.stars:not(.stars:last-child) {
+    margin-right: 15px;
+}
+
+.stars-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.stars:hover {
+    color: black;
+}
+
+.user-review {
+    width: 50%;
+    height: 1.5rem;
+}
