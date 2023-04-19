@@ -1,14 +1,10 @@
-
-
-
-
 let starsArr = document.querySelectorAll('.stars-container svg'); //seleziono tutti gli svg (stelle)
 
 starsArr.forEach((star, i) => {
     star.addEventListener('click', function () {
         setFill(i);
         // salvo l'indice dell'ultima stella selezionata nel localStorage
-        localStorage.setItem('selectedStarIndex', i.toString());
+        localStorage.setItem('votoStelle', i + 1);
     })
 }) //imposto l'evento click a tutti gli svg (stelle) e gli dico di eseguire la funzione setFill quando appunto si clicca sulla stella. setFill prende come parametro il numero della stella, utile poi sotto per il ciclo
 
@@ -16,9 +12,7 @@ starsArr.forEach((star, i) => {
 const salvataggioIndex = localStorage.getItem('votoStelle');
 
 if (salvataggioIndex) {
-
-    setFill(parseInt(salvataggioIndex, 10));
-
+    setFill(parseInt(salvataggioIndex - 1));
 }
 
 
@@ -38,45 +32,35 @@ function setFill(index) {
 const commentiInput = document.querySelector('.user-review');
 
 // seleziono l'elemento in cui riesco a visualizzare i commenti 
-const listaCommenti = document.querySelector('.comments');
-
-document.querySelector('input').addEventListener('submit', (event) => {
-
-    // metodo dell'interfaccia Eventdice all'agente utente che se l'evento non viene gestito in modo esplicito, la sua azione predefinita non dovrebbe essere intrapresa come sarebbe normalmente.
-    event.preventDefault();
-})
+// const listaCommenti = document.querySelector('.comments');
 
 // ottengo il valore del commento dall'input
 const commenti = commentiInput.value;
 
 // creo un array vuoto di commenti 
-let comments = [];
+//let comments = [];
 
 // creo un if che controlla se ci sono dei commenti già salvati nel local storage
 
-if (localStorage.getItem('comments')) {
+// if (localStorage.getItem('comments')) {
 
-    // se ci sono dei commenti li ottiene e li converte in un'array tramite JSON.parse
-    comments = JSON.parse(localStorage.getItem('comments'));
+//     // se ci sono dei commenti li ottiene e li converte in un'array tramite JSON.parse
+//     comments = JSON.parse(localStorage.getItem('comments'));
 
-}
+// }
 
 // aggiungo il commento all'array
-comments.push(commenti);
+//comments.push(commenti);
 
 // salvo l'array di commenti nel localStorage tramite stringify
-localStorage.setItem('comments', JSON.stringify(comments));
+//localStorage.setItem('comments', JSON.stringify(comments));
 
 // visualizzo il commento nell'elenco dei commenti
 // const commentItem = document.createElement('li');
 // listaCommenti.appendChild(commentItem);
 
 // impostazione di reset del valore input
-commentiInput.value = "";
-
-console.log(localStorage.getItem('comments'));
-
-// // visualizzo  i commenti salvati al caricamento della pagina
+//commentiInput.value = "";
 
 
 // if (localStorage.getItem("comments")) {
@@ -90,20 +74,12 @@ console.log(localStorage.getItem('comments'));
 //     })
 
 // }
+
 function invioForm() {
     let campoForm = document.querySelector('form');
-
-
-
-
     campoForm.addEventListener('submit', function (e) {
         e.preventDefault();
-
-        console.log('ciao dio porco');
-
-        // localStorage.setItem('comments', campoForm.value);
-
+        localStorage.setItem('review', commentiInput.value);
     })
-
 }
 invioForm();
