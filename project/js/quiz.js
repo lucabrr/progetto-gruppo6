@@ -1,6 +1,7 @@
 let questionsArr = [];
 let shuffledquestionsArr = [];
 let selectedQuestion = {};
+let counterQuestions = 0;
 
 async function getQuestions() {
     fetch('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy').then(async function(res) {
@@ -10,7 +11,24 @@ async function getQuestions() {
     })
 }
 
+function addBtnsEvents() {
+    let target = document.getElementById('contenitoreRisposte');
+    let risposte_1 = target.querySelector('.risposte-1');
+    let risposte_2 = target.querySelector('.risposte-2');
+
+    risposte_1.firstElementChild.addEventListener('click', buildQuiz);
+    risposte_2.firstElementChild.addEventListener('click', buildQuiz);
+
+    if (risposte_1.children.length == 2) {
+        risposte_1.lastElementChild.addEventListener('click', buildQuiz);
+    }
+    if (risposte_2.children.length == 2) {
+        risposte_2.lastElementChild.addEventListener('click', buildQuiz);
+    }
+}
+
 getQuestions();
+addBtnsEvents();
 
 function shuffle(array) {
     const newArray = [...array]
@@ -31,6 +49,12 @@ function buildQuiz() {
     let risposte_2 = target.querySelector('.risposte-2');
     shuffledquestionsArr = shuffle(questionsArr);
     let random = Math.floor(Math.random() * (shuffledquestionsArr.length));
+    let numDomanda = document.getElementById('numeroDomande');
+    let primo_titolo = document.querySelector('.prima-parte');
+    let secondo_titolo = document.querySelector('.seconda-parte');
+
+    let title = shuffledquestionsArr[random].question;
+    
     
     if (shuffledquestionsArr[random].type == "boolean") {
         if (risposte_1.children.length == 2) {
@@ -76,8 +100,10 @@ function buildQuiz() {
         newB4.textContent = shuffledquestionsArr[random].incorrect_answers[2];
         risposte_2.replaceChild(newB4, risposte_2.lastElementChild);
     }
-    
+    counterQuestions++;
+    numDomanda.innerHTML = `QUESTION ${counterQuestions} <span id="domandeRimaste">&nbsp;/ 10</span>`;
     shuffledquestionsArr.splice(random, 1);
+    addBtnsEvents();
 
     //console.log(shuffledquestionsArr);
     // console.log(questionsArr);
