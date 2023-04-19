@@ -4,7 +4,7 @@ let sbagliate = 4
 new Chart(ctx, {
   type: 'doughnut',
   data: {
-    labels: ['Risposte sbagliate', 'Risposte corrette'],
+   // labels: ['Risposte sbagliate', 'Risposte corrette'],
     datasets: [{
       label: '# of Votes',
       data: [sbagliate,corrette],
@@ -17,3 +17,4 @@ new Chart(ctx, {
       
     }]
   }});
+
