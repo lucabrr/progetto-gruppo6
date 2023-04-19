@@ -30,39 +30,32 @@ img {
 
 #contenitoreDomanda {
     color: white;
-    font-size: 48px;
-    margin-bottom: 40px;
+    font-size: 36px;
+    margin-bottom: 50px;
     text-align: center;
+    padding: 0 100px;
 }
 
-#contenitoreDomanda .seconda-parte {
-    display: block;
-    color: white;
-    font-size: 60px;
-    font-weight: bold;
-}
-
+<<<<<<< HEAD
 #contenitoreRisposte {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+=======
+#contenitoreRisposte{
+>>>>>>> origin/marco
     margin-bottom: 100px;
 }
 
 .risposte-1 {
-    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
 }
 
 .risposte-2 {
-    margin-left: 30px;
-}
-
-#domanda1 {
-    margin-bottom: 20px;
-}
-
-#domanda3 {
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .risposte {
@@ -76,6 +69,8 @@ img {
     margin: 10px;
     font-family: 'Inter', sans-serif;
     cursor: pointer;
+    width: 30%;
+    text-align: center;
 }
 
 .risposte:hover {
