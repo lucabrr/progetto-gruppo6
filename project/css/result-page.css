@@ -91,3 +91,13 @@ button:hover {
 #numeroSbagliate {
     font-size: 20px;
 }
+#sommario{
+    margin-bottom: 20px;
+}
+div #complimenti{
+    font-weight: bold;
+    font-size: 60px;
+    margin-bottom: 10px
+    
+}
+
