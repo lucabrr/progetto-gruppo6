@@ -1,8 +1,11 @@
-const ctx = document.getElementById('myChart');
-const corrette = 7
-const sbagliate =3
-const domande = 11
 
+  let corrette = 9
+  let sbagliate = 4
+  let domande = 13
+
+
+
+const ctx = document.getElementById('myChart');
 new Chart(ctx, {
   type: 'doughnut',
   data: {
