@@ -91,6 +91,16 @@
     align-items: center;
 }
 
+.mostraAvviso {
+    display: none;
+}
+
+.subContent div p {
+    font-size: 23px;
+    color: rgb(156, 25, 42);
+    padding: 10px 0px 10px 0px;
+}
+
 /* #contenuto{
     margin-bottom: 200px;
 } */

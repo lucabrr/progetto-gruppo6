@@ -1,4 +1,3 @@
-// import './modules/quiz.js';
 
 (function acceptButton() {
     const btn = document.getElementById('acceptBtn');
