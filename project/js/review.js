@@ -72,18 +72,21 @@ localStorage.setItem('comments', JSON.stringify(comments));
 // listaCommenti.appendChild(commentItem);
 
 // impostazione di reset del valore input
-// commentiInput.value = "";
+commentiInput.value = "";
+
 
 
 // // visualizzo  i commenti salvati al caricamento della pagina
-// if (localStorage.getItem("comments")) {
 
-//     const newComment = JSON.parse(localStorage.getItem("comments"));
-//     comments.forEach((comment) => {
 
-//         const oggettiCommenti = document.createElement('li');
-//         oggettiCommenti.textContent = commenti;
-//         listaCommenti.appendChild(oggettiCommenti);
-//     })
-
-// }
+    // if (localStorage.getItem("comments")) {
+        
+    //     const newComment = JSON.parse(localStorage.getItem("comments"));
+    //     comments.forEach((comment) => {
+            
+    //         const oggettiCommenti = document.createElement('li');
+    //         oggettiCommenti.textContent = commenti;
+    //         listaCommenti.appendChild(oggettiCommenti);
+    //     })
+        
+    // }
