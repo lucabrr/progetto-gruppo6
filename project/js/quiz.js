@@ -5,6 +5,7 @@ let counterQuestions = 0;
 let correctAnswers = 0;
 let wrongAnswers = 0;
 let timerInterval = null;
+
 //seleziona l'elemento HTML dove visualizzare il timer
 let timer = document.getElementById("timer");
 
@@ -34,6 +35,7 @@ const COLOR_CODES = {
     threshold: ALERT_THRESHOLD
   }
 };
+
 let remainingPathColor = COLOR_CODES.info.color;
 
 async function getQuestions() {
@@ -92,8 +94,9 @@ function doBtnEvents(ind, num) {
     }
 
     actualAnswer == selectedQuestion.correct_answer ? correctAnswers += 1 : wrongAnswers += 1;
-
-    console.log(`Correct: ${correctAnswers} - Wrong: ${wrongAnswers}`);
+    localStorage.setItem('correctAnswers', correctAnswers);
+    localStorage.setItem('wrongAnswers', wrongAnswers);
+    
     buildQuiz();
 }
 
@@ -192,15 +195,8 @@ function buildQuiz() {
         shuffledquestionsArr.splice(random, 1);
         console.log(shuffledquestionsArr);
         addBtnsEvents();
-
-        //console.log(shuffledquestionsArr);
-        // console.log(questionsArr);
-        // newArr = shuffle(questionsArr);
-        // console.log(newArr);
     }
 }
-
-
 
 
 function buildTimer() {
