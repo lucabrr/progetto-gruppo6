@@ -116,6 +116,7 @@ function shuffle(array) {
 
 function buildQuiz() {
     if (shuffledquestionsArr.length == 0) {
+        onTimesUp();
         //blocca tutto e vai alla pagina successiva
     } else {
         let target = document.getElementById('contenitoreRisposte');
