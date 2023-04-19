@@ -9,6 +9,7 @@ async function getQuestions() {
     fetch('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy').then(async function(res) {
         let json = await res.json();
         questionsArr = json.results;
+        shuffledquestionsArr = shuffle(questionsArr);
         buildQuiz();
     })
 }
@@ -87,7 +88,6 @@ function buildQuiz() {
     let target = document.getElementById('contenitoreRisposte');
     let risposte_1 = target.querySelector('.risposte-1');
     let risposte_2 = target.querySelector('.risposte-2');
-    shuffledquestionsArr = shuffle(questionsArr);
     let random = Math.floor(Math.random() * (shuffledquestionsArr.length));
     let numDomanda = document.getElementById('numeroDomande');
     let primo_titolo = document.querySelector('.prima-parte');
@@ -95,7 +95,6 @@ function buildQuiz() {
 
     primo_titolo.innerHTML = shuffledquestionsArr[random].question;
 
-    
     if (shuffledquestionsArr[random].type == "boolean") {
         if (risposte_1.children.length == 2) {
             risposte_1.removeChild(risposte_1.lastElementChild);
