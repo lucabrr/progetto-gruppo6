@@ -18,14 +18,32 @@
             <p>The summary of your answers:</p>
         </div>
         <div id="resultsContainer">
-            <div>risposte corrette + percentuale</div>
-            <div>grafico + una p centrale di descrizione</div>
-            <div>risposte errate + percentuale</div>
+            <div class="containerPercent">
+                <p>Corrette</p>
+                <span id="percentualeCorrette"></span>
+                <p class="comparazione"><span id="numeroCorrette"></span> su <span class="numeroDomande"></span> domande
+                </p>
+
+            </div>
+
+            <div class="contenitoreDelChart" style=" width: 400px; height: 400px;">
+                <canvas id="myChart"></canvas>
+            </div>
+
+            <div class="containerPercent">
+                <p>Sbagliate</p>
+                <span id="percentualeSbagliate"></span>
+                <p class="comparazione"><span id="numeroSbagliate"></span> su <span class="numeroDomande"></span>
+                    domande</p>
+            </div>
         </div>
         <div id="button">
             <button>RATE US</button>
         </div>
+
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/result.js"></script>
 </body>
 
 </html>
