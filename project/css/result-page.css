@@ -66,16 +66,27 @@ button:hover {
     display: flex;
     flex-direction: column;
 }
-.containerPercent span{
+#percentualeCorrette{
     font-weight: bolder;
     font-size: 50px;
     margin-bottom: 5px;
 
 }
+#percentualeSbagliate{
+    font-weight: bolder;
+    font-size: 50px;
+    margin-bottom: 5px;
+}
 .containerPercent :first-child{
     font-size: 50px;
 }
-.containerPercent :last-child{
+.comparazione{
     font-size: 20px;
     font-family: 'Inter', sans-serif;
+}
+#numeroCorrette {
+    font-size: 20px;
+}
+#numeroSbagliate {
+    font-size: 20px;
 }
