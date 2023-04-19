@@ -64,7 +64,7 @@ img{
     cursor: pointer;
     width: 30%;
     text-align: center;
-}
+} 
 
 .risposte:hover{
     background: linear-gradient(to bottom, #d20094, #900080);
