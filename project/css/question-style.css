@@ -62,9 +62,9 @@ img {
     color: white;
     font-size: 16px;
     box-sizing: border-box;
-    padding: 18px 120px;
+    padding: 15px 20px;
     border: 1px solid white;
-    border-radius: 25px;
+    border-radius: 30px;
     background-color: rgba(114, 112, 112, 0.301);
     margin: 10px;
     font-family: 'Inter', sans-serif;
