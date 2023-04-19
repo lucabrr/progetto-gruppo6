@@ -74,7 +74,7 @@
 }
 
 .user-review {
-    width: 70%;
+    width: 90%;
     height: 2rem;
     background-color: transparent;
     border: none;
@@ -84,6 +84,12 @@
     font-size: medium;
     color:rgb(234, 234, 234);
     margin-bottom: 50px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .user-review:focus {
