@@ -53,6 +53,10 @@
     margin-bottom: 10px;
 }
 
+.mostraAvviso {
+    opacity: 0;
+}
+
 .myUl {
     margin-left: 25px;
 }

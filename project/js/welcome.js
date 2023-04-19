@@ -7,7 +7,7 @@
         if (checkB.checked) {
             location.href = "../questions.html"
         } else {
-            alert("Please check che condition checkbox !")
+            document.getElementById('avviso').classList.remove('mostraAvviso');
         }
     })
 })()
