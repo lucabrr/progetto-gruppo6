@@ -4,7 +4,7 @@
 #mainContainer {
     background-image: url(../assets/bg.jpg);
     background-size: cover;
-    height: 100vh;
+    height: 100%;
     color: rgb(234, 234, 234);
 }
 
@@ -62,31 +62,38 @@ button {
 button:hover {
     box-shadow: 1px 1px 9px 5px #00FFFF;
 }
-.containerPercent{
+
+.containerPercent {
     display: flex;
     flex-direction: column;
 }
-#percentualeCorrette{
+
+#percentualeCorrette {
     font-weight: bolder;
     font-size: 50px;
     margin-bottom: 5px;
 
 }
-#percentualeSbagliate{
+
+#percentualeSbagliate {
     font-weight: bolder;
     font-size: 50px;
     margin-bottom: 5px;
 }
-.containerPercent :first-child{
+
+.containerPercent :first-child {
     font-size: 50px;
 }
-.comparazione{
+
+.comparazione {
     font-size: 20px;
     font-family: 'Inter', sans-serif;
 }
+
 #numeroCorrette {
     font-size: 20px;
 }
+
 #numeroSbagliate {
     font-size: 20px;
 }
