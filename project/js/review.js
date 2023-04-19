@@ -17,3 +17,4 @@ function setFill(index) {
         starsArr[i].classList.add('stars-svg-with-hover');
     } //applico lo sfondo azzurro a tutte le stelle dalla prima fino a quella selezionata, le altre rimangono pulite
 }
+
