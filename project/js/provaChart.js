@@ -12,14 +12,8 @@ new Chart(ctx, {
         '#C2128D',
         "#00FFFF",
         ],
-      borderWidth: 0
+      borderWidth:0 ,
+      cutout: 130
+      
     }]
-  },
-  options: {
-    // scales: {
-    //   y: {
-    //     beginAtZero: true
-    //   }
-    // }
-  }
-});
+  }});
