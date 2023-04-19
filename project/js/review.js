@@ -74,7 +74,7 @@ localStorage.setItem('comments', JSON.stringify(comments));
 // impostazione di reset del valore input
 commentiInput.value = "";
 
-
+console.log(localStorage.getItem('comments'));
 
 // // visualizzo  i commenti salvati al caricamento della pagina
 
@@ -92,5 +92,18 @@ commentiInput.value = "";
 // }
 function invioForm() {
     let campoForm = document.querySelector('form');
-    campoForm.addEventListener('submit', function (event) { })
+
+
+
+
+    campoForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        console.log('ciao dio porco');
+
+        // localStorage.setItem('comments', campoForm.value);
+
+    })
+
 }
+invioForm();
