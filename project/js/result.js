@@ -2,6 +2,7 @@ const ctx = document.getElementById('myChart');
 const corrette = 7
 const sbagliate =3
 const domande = 11
+
 new Chart(ctx, {
   type: 'doughnut',
   data: {
