@@ -2,6 +2,8 @@ let questionsArr = [];
 let shuffledquestionsArr = [];
 let selectedQuestion = {};
 let counterQuestions = 0;
+let correctAnswers = 0;
+let wrongAnswers = 0;
 
 async function getQuestions() {
     fetch('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy').then(async function(res) {
@@ -16,15 +18,53 @@ function addBtnsEvents() {
     let risposte_1 = target.querySelector('.risposte-1');
     let risposte_2 = target.querySelector('.risposte-2');
 
-    risposte_1.firstElementChild.addEventListener('click', buildQuiz);
-    risposte_2.firstElementChild.addEventListener('click', buildQuiz);
+    risposte_1.firstElementChild.addEventListener('click', function() {
+        doBtnEvents(1, 1);
+    });
+    risposte_2.firstElementChild.addEventListener('click', function() {
+        doBtnEvents(2, 1);
+    });
 
     if (risposte_1.children.length == 2) {
-        risposte_1.lastElementChild.addEventListener('click', buildQuiz);
+        risposte_1.lastElementChild.addEventListener('click', function() {
+            doBtnEvents(1, 2);
+        });
     }
     if (risposte_2.children.length == 2) {
-        risposte_2.lastElementChild.addEventListener('click', buildQuiz);
+        risposte_2.lastElementChild.addEventListener('click', function() {
+            doBtnEvents(2, 2);
+        });
     }
+}
+
+function doBtnEvents(ind, num) {
+    let actualAnswer = "";
+    if (ind == 1) {
+        let risposte_1 = document.querySelector('.risposte-1');
+        if (num == 1) {
+            let btn = risposte_1.firstElementChild;
+            actualAnswer = btn.textContent;
+        } else {
+            let btn = risposte_1.lastElementChild;
+            actualAnswer = btn.textContent;
+        }
+    } else {
+        let risposte_2 = document.querySelector('.risposte-2');
+        if (num == 1) {
+            let btn = risposte_2.firstElementChild;
+            actualAnswer = btn.textContent;
+        } else {
+            let btn = risposte_2.lastElementChild;
+            actualAnswer = btn.textContent;
+        }
+    }
+
+    actualAnswer == selectedQuestion.correct_answer ? correctAnswers += 1 : wrongAnswers += 1;
+
+    console.log(`Correct: ${correctAnswers} - Wrong: ${wrongAnswers}`);
+    //clear interval / timer
+    buildQuiz();
+    //restart timer
 }
 
 getQuestions();
@@ -51,6 +91,7 @@ function buildQuiz() {
     let random = Math.floor(Math.random() * (shuffledquestionsArr.length));
     let numDomanda = document.getElementById('numeroDomande');
     let primo_titolo = document.querySelector('.prima-parte');
+    selectedQuestion = shuffledquestionsArr[random];
 
     primo_titolo.innerHTML = shuffledquestionsArr[random].question;
 
@@ -75,6 +116,15 @@ function buildQuiz() {
         risposte_2.replaceChild(newB2, risposte_2.firstElementChild);
         
     } else {
+        let tmpBtn = document.createElement('button');
+        let tmpBtn2 = document.createElement('button');
+        if (risposte_1.children.length == 1) {
+            risposte_1.appendChild(tmpBtn);
+        }
+        if (risposte_2.children.length == 1) {
+            risposte_2.appendChild(tmpBtn2);
+        }
+
         let newB1 = document.createElement('button');
         newB1.classList.add('risposte');
         newB1.id = "risposta1";
@@ -102,6 +152,7 @@ function buildQuiz() {
     counterQuestions++;
     numDomanda.innerHTML = `QUESTION ${counterQuestions} <span id="domandeRimaste">&nbsp;/ 10</span>`;
     shuffledquestionsArr.splice(random, 1);
+    console.log(shuffledquestionsArr);
     addBtnsEvents();
 
     //console.log(shuffledquestionsArr);
