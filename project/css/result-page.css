@@ -35,7 +35,7 @@ div img {
 
 #resultsContainer {
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-evenly;
     align-items: center;
     margin: 35px 25px 70px 25px;
     font-family: 'Inter', sans-serif;

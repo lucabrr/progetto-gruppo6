@@ -53,6 +53,10 @@
     margin-bottom: 10px;
 }
 
+.mostraAvviso {
+    opacity: 0;
+}
+
 .myUl {
     margin-left: 25px;
 }
@@ -85,6 +89,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.mostraAvviso {
+    display: none;
+}
+
+.subContent div p {
+    font-size: 23px;
+    color: rgb(156, 25, 42);
+    padding: 10px 0px 10px 0px;
 }
 
 /* #contenuto{
