@@ -1,7 +1,7 @@
 
-  let corrette = 3
-  let sbagliate = 4
-  let domande = 13
+  let corrette 
+  let sbagliate 
+  let domande = 10
   corrette = localStorage.getItem("correctAnswers")
   sbagliate = localStorage.getItem("wrongAnswers")
 
