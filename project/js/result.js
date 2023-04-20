@@ -13,7 +13,7 @@ new Chart(ctx, {
   data: {
    // labels: ['Risposte sbagliate', 'Risposte corrette'],
     datasets: [{
-      label: '# of Votes',
+      label: '# numero di porco dio',
       data: [sbagliate,corrette],
       backgroundColor: [
         '#C2128D',
@@ -55,12 +55,12 @@ function risultatoTest() {
   let descrizione = document.getElementById("descrizione")
 
   if(percentCorrette >= 60){
-    risultato.textContent = "Complimenti!"
-    descrizione.textContent = "hai superato il test!"
+    risultato.textContent = "Congratualations!"
+    descrizione.textContent = "you pass the exam!"
     risultato.style.color = "#00FFFF"
   }else{
-    risultato.textContent = "Ci dispiace..."
-    descrizione.textContent = "non hai superato il test..."
+    risultato.textContent = "We are sorry.."
+    descrizione.textContent = "you didn't pass the exam.."
     risultato.style.color = "#C2128D"
   }
   
