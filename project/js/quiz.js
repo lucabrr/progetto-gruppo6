@@ -233,7 +233,7 @@ function buildQuiz() {
           target.style.opacity = 1;
           numDomanda.style.opacity = 1;
           timer.style.opacity = 1;
-        }, 1000)
+        }, 600)
 
         addBtnsEvents();
     }
