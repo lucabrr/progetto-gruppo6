@@ -20,7 +20,7 @@ div img {
 #titlesContainer {
     text-align: center;
     font-family: 'Outfit', sans-serif;
-    margin-bottom: 50px;
+    margin-bottom: -50px;
 }
 
 #titlesContainer h3 {
@@ -37,7 +37,7 @@ div img {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 35px 25px 70px 25px;
+    margin: 35px 0px 70px 25px;
     font-family: 'Inter', sans-serif;
 }
 
@@ -98,13 +98,29 @@ button:hover {
 #numeroSbagliate {
     font-size: 20px;
 }
-#sommario{
+
+#sommario {
     margin-bottom: 20px;
 }
-div #complimenti{
+
+div #complimenti {
     font-weight: bold;
-    font-size: 60px;
+    font-size: 30px;
     margin-bottom: 10px
-    
 }
 
+div #descrizione {
+    font-size: 20px;
+}
+
+#complimenti,
+#descrizione {
+    position: relative;
+    top: 230px;
+}
+
+#titleContainer h3,
+#titleConteiner p {
+    position: relative;
+    top: 100px;
+}
