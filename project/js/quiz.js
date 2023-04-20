@@ -121,7 +121,7 @@ function shuffle(array) {
 function buildQuiz() {
     if (shuffledquestionsArr.length == 0) {
         onTimesUp();
-        //blocca tutto e vai alla pagina successiva
+        location.href = "../result-page.html"
     } else {
         let target = document.getElementById('contenitoreRisposte');
         let risposte_1 = target.querySelector('.risposte-1');
