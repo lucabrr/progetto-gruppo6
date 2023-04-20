@@ -24,4 +24,15 @@
         }
 
     })
-})()
+})
+    ()
+
+
+function sorpresa() {
+    let easterEgg = document.querySelector('#easter');
+    let audioEgg = document.querySelector('#audioIntro');
+    easterEgg.addEventListener('click', function () {
+        audioEgg.play()
+    })
+}
+sorpresa()
