@@ -148,11 +148,12 @@ function buildQuiz() {
     let primo_titolo = document.querySelector('.prima-parte');
     selectedQuestion = shuffledquestionsArr[random];
 
-    let newB1 = document.createElement('button');
-    newB1.classList.add('risposte');
-    newB1.id = "risposta1";
-    newB1.innerHTML = shuffledquestionsArr[random].correct_answer;
-    risposte_1.replaceChild(newB1, risposte_1.firstElementChild);
+    primo_titolo.innerHTML = shuffledquestionsArr[random].question;
+    onTimesUp();
+    timePassed = 0;
+    timeLeft = 60;
+    buildTimer();
+    startTimer();
 
     let tmpSelectedQuestion = [];
     let shuffledSelectedQuestion = [];
@@ -236,13 +237,7 @@ function buildQuiz() {
 
     addBtnsEvents();
   }
-  counterQuestions++;
-  numDomanda.innerHTML = `QUESTION ${counterQuestions} <span id="domandeRimaste">&nbsp;/ 10</span>`;
-  shuffledquestionsArr.splice(random, 1);
-  console.log(shuffledquestionsArr);
-  addBtnsEvents();
 }
-
 
 
 function buildTimer() {
