@@ -81,7 +81,7 @@
     padding: 0 30px;
     color: white;
     font-size: medium;
-    color:rgb(234, 234, 234);
+    color: rgb(234, 234, 234);
     margin-bottom: 50px;
 }
 
@@ -106,6 +106,6 @@ form {
 }
 
 .customBtn:hover {
-    color:rgb(62, 62, 62);
+    color: rgb(62, 62, 62);
     box-shadow: 1px 1px 9px 5px #00FFFF;
 }

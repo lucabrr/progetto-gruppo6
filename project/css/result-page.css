@@ -108,6 +108,10 @@ div #complimenti {
     font-size: 30px;
     margin-bottom: 10px
 }
+.contenitoreDelChart {
+    width: 400px;
+    height: 400px;
+}
 
 div #descrizione {
     font-size: 20px;
