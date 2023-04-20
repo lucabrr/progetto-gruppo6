@@ -1,8 +1,13 @@
-const ctx = document.getElementById('myChart');
-const corrette = 7
-const sbagliate =3
-const domande = 11
 
+  let corrette 
+  let sbagliate 
+  let domande = 10
+  corrette = localStorage.getItem("correctAnswers")
+  sbagliate = localStorage.getItem("wrongAnswers")
+
+
+
+const ctx = document.getElementById('myChart');
 new Chart(ctx, {
   type: 'doughnut',
   data: {
@@ -33,13 +38,38 @@ new Chart(ctx, {
 }
 inserisciValori()
 
+let percentCorrette
+let percentSbagliate
 function calcolaPercentuali() {
   let percentualeCorrette = document.getElementById("percentualeCorrette")
   let percentualeSbagliate = document.getElementById("percentualeSbagliate")
-   let percentCorrette = (corrette/domande)*100 
-   let percentSbagliate = (sbagliate/domande)*100 
+  percentCorrette = (corrette/domande)*100 
+  percentSbagliate = (sbagliate/domande)*100 
   percentualeCorrette.textContent = percentCorrette.toFixed(1) + "%"
   percentualeSbagliate.textContent = percentSbagliate.toFixed(1) + "%"
 }
 calcolaPercentuali()
 
+function risultatoTest() {
+  let risultato = document.getElementById("complimenti")
+  let descrizione = document.getElementById("descrizione")
+
+  if(percentCorrette >= 60){
+    risultato.textContent = "Complimenti!"
+    descrizione.textContent = "hai superato il test!"
+    risultato.style.color = "#00FFFF"
+  }else{
+    risultato.textContent = "Ci dispiace..."
+    descrizione.textContent = "non hai superato il test..."
+    risultato.style.color = "#C2128D"
+  }
+  
+}
+risultatoTest()
+
+
+
+const pagSucc = document.getElementById('button');
+pagSucc.addEventListener('click', () => {
+  location.href = '../review.html'
+})
