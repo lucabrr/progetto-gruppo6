@@ -101,6 +101,10 @@
     padding: 10px 0px 10px 0px;
 }
 
+#avviso {
+    text-decoration: underline;
+}
+
 /* #contenuto{
     margin-bottom: 200px;
 } */
