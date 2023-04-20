@@ -43,3 +43,7 @@ function calcolaPercentuali() {
 }
 calcolaPercentuali()
 
+const pagSucc = document.getElementById('button');
+pagSucc.addEventListener('click', () => {
+  location.href = '../review.html'
+})

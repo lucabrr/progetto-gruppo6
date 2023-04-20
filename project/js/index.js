@@ -23,7 +23,5 @@
             document.getElementById('avviso').classList.add('mostraAvviso')
         }
 
-
-
     })
 })()
