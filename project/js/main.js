@@ -405,25 +405,26 @@ function getValues() {
         let cloneTemplate = reviewTemplate.content.cloneNode(true);
         let divTemplate = document.getElementById('div-review');
         divTemplate.append(cloneTemplate);
-        const ctx = document.getElementById('myChart');
-        new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            // labels: ['Risposte sbagliate', 'Risposte corrette'],
-            datasets: [{
-            label: '# of Votes',
-            data: [sbagliate, corrette],
-            backgroundColor: [
-                '#C2128D',
-                "#00FFFF",
-            ],
-            borderWidth: 0,
-            cutout: 145
-
-            }]
-        }
-        });
+        reviewInit();
     })
+      const ctx = document.getElementById('myChart');
+      new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+          // labels: ['Risposte sbagliate', 'Risposte corrette'],
+          datasets: [{
+          label: '# of Questions',
+          data: [sbagliate, corrette],
+          backgroundColor: [
+              '#C2128D',
+              "#00FFFF",
+          ],
+          borderWidth: 0,
+          cutout: 145
+
+          }]
+      }
+    });
   }
 
 
@@ -454,11 +455,11 @@ function calcolaPercentuali() {
   
     if (percentCorrette >= 60) {
       risultato.textContent = "Congratualations!"
-      descrizione.textContent = "you pass the exam!"
+      descrizione.textContent = "you passed the exam!"
       risultato.style.color = "#00FFFF"
     } else {
       risultato.textContent = "We are sorry.."
-      descrizione.textContent = "you didn't pass the exam.."
+      descrizione.textContent = "you didn't passed the exam.."
       risultato.style.color = "#C2128D"
     }
   }
