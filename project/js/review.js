@@ -12,7 +12,9 @@ starsArr.forEach((star, i) => {
 const salvataggioIndex = localStorage.getItem('votoStelle');
 
 if (salvataggioIndex) {
-    setFill(parseInt(salvataggioIndex - 1));
+
+    setFill(parseInt(salvataggioIndex, - 1));
+
 }
 
 
@@ -55,31 +57,20 @@ const commenti = commentiInput.value;
 // salvo l'array di commenti nel localStorage tramite stringify
 //localStorage.setItem('comments', JSON.stringify(comments));
 
-// visualizzo il commento nell'elenco dei commenti
-// const commentItem = document.createElement('li');
-// listaCommenti.appendChild(commentItem);
-
 // impostazione di reset del valore input
-//commentiInput.value = "";
+commentiInput.value = "";
 
+console.log(localStorage.getItem('comments'));
 
-// if (localStorage.getItem("comments")) {
-
-//     const newComment = JSON.parse(localStorage.getItem("comments"));
-//     comments.forEach((comment) => {
-
-//         const oggettiCommenti = document.createElement('li');
-//         oggettiCommenti.textContent = commenti;
-//         listaCommenti.appendChild(oggettiCommenti);
-//     })
-
-// }
-
+// queryseleziono il form, gli aggiungo l'evento submit, al click scatenerà la funzione che salva su local storage il contenuto input
 function invioForm() {
     let campoForm = document.querySelector('form');
+
     campoForm.addEventListener('submit', function (e) {
         e.preventDefault();
+
         localStorage.setItem('review', commentiInput.value);
+
     })
 }
 invioForm();
