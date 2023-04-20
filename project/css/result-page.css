@@ -107,4 +107,8 @@ div #complimenti{
     margin-bottom: 10px
     
 }
+.contenitoreDelChart {
+    width: 400px;
+    height: 400px;
+}
 

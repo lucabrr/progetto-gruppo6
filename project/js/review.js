@@ -69,7 +69,7 @@ function invioForm() {
     campoForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        localStorage.setItem('review', commentiInput.value);
+        localStorage.setItem('feedback', commentiInput.value);
 
     })
 }
