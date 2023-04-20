@@ -37,7 +37,7 @@ div img {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 35px 0px 70px 25px;
+    margin: 35px 60px 70px 25px;
     font-family: 'Inter', sans-serif;
 }
 
@@ -116,7 +116,7 @@ div #descrizione {
 #complimenti,
 #descrizione {
     position: relative;
-    top: 230px;
+    top: 220px;
 }
 
 #titleContainer h3,
