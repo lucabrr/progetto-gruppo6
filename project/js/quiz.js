@@ -137,7 +137,14 @@ function buildQuiz() {
         buildTimer();
         startTimer();
 
-        if (shuffledquestionsArr[random].type == "boolean") {
+        let tmpSelectedQuestion = [];
+        let shuffledSelectedQuestion = [];
+
+        if (selectedQuestion.type == "boolean") {
+          tmpSelectedQuestion.push(selectedQuestion.correct_answer);
+          tmpSelectedQuestion.push(selectedQuestion.incorrect_answers[0]);
+          shuffledSelectedQuestion = shuffle(tmpSelectedQuestion);
+
             if (risposte_1.children.length == 2) {
                 risposte_1.removeChild(risposte_1.lastElementChild);
             }
@@ -147,16 +154,25 @@ function buildQuiz() {
             let newB1 = document.createElement('button');
             newB1.classList.add('risposte');
             newB1.id = "risposta1";
-            newB1.innerHTML = shuffledquestionsArr[random].correct_answer;
+            newB1.innerHTML = shuffledSelectedQuestion[0];
             risposte_1.replaceChild(newB1, risposte_1.firstElementChild);
             
             let newB2 = document.createElement('button');
             newB2.classList.add('risposte');
             newB2.id = "risposta3";
-            newB2.innerHTML = shuffledquestionsArr[random].incorrect_answers[0];
+            newB2.innerHTML = shuffledSelectedQuestion[1];
             risposte_2.replaceChild(newB2, risposte_2.firstElementChild);
             
         } else {
+            let tmpSelectedQuestion = [];
+            let shuffledSelectedQuestion = [];
+
+            tmpSelectedQuestion.push(selectedQuestion.correct_answer);
+            tmpSelectedQuestion.push(selectedQuestion.incorrect_answers[0]);
+            tmpSelectedQuestion.push(selectedQuestion.incorrect_answers[1]);
+            tmpSelectedQuestion.push(selectedQuestion.incorrect_answers[2]);
+            shuffledSelectedQuestion = shuffle(tmpSelectedQuestion);
+
             let tmpBtn = document.createElement('button');
             let tmpBtn2 = document.createElement('button');
             if (risposte_1.children.length == 1) {
@@ -169,31 +185,30 @@ function buildQuiz() {
             let newB1 = document.createElement('button');
             newB1.classList.add('risposte');
             newB1.id = "risposta1";
-            newB1.innerHTML = shuffledquestionsArr[random].correct_answer;
+            newB1.innerHTML = shuffledSelectedQuestion[0];
             risposte_1.replaceChild(newB1, risposte_1.firstElementChild);
 
             let newB2 = document.createElement('button');
             newB2.classList.add('risposte');
             newB2.id = "risposta2";
-            newB2.innerHTML = shuffledquestionsArr[random].incorrect_answers[0];
+            newB2.innerHTML = shuffledSelectedQuestion[0];;
             risposte_1.replaceChild(newB2, risposte_1.lastElementChild);
 
             let newB3 = document.createElement('button');
             newB3.classList.add('risposte');
             newB3.id = "risposta3";
-            newB3.innerHTML = shuffledquestionsArr[random].incorrect_answers[1];
+            newB3.innerHTML = shuffledSelectedQuestion[2];;
             risposte_2.replaceChild(newB3, risposte_2.firstElementChild);
 
             let newB4 = document.createElement('button');
             newB4.classList.add('risposte');
             newB4.id = "risposta4";
-            newB4.innerHTML = shuffledquestionsArr[random].incorrect_answers[2];
+            newB4.innerHTML = shuffledSelectedQuestion[3];
             risposte_2.replaceChild(newB4, risposte_2.lastElementChild);
         }
         counterQuestions++;
         numDomanda.innerHTML = `QUESTION ${counterQuestions} <span id="domandeRimaste">&nbsp;/ 10</span>`;
         shuffledquestionsArr.splice(random, 1);
-        console.log(shuffledquestionsArr);
         addBtnsEvents();
     }
 }
