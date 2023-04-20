@@ -10,9 +10,14 @@
   margin: 0 auto;
 }
 
-img {
-  width: 20%;
-  margin: 40px 0px 0px 40px;
+.nav img {
+  width: 21.5%;
+  margin: 50px 0px 0px 80px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
 }
 
 #timer {
@@ -20,11 +25,6 @@ img {
   margin-bottom: 50px;
   margin-top: 20px;
   margin-right: 70px;
-}
-
-.nav {
-  display: flex;
-  justify-content: space-between;
 }
 
 #contenitoreDomanda {
