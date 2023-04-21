@@ -108,3 +108,7 @@
 /* #contenuto{
     margin-bottom: 200px;
 } */
+
+video{
+    opacity:0;
+}

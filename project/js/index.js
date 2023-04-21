@@ -32,7 +32,21 @@ function sorpresa() {
     let easterEgg = document.querySelector('#easter');
     let audioEgg = document.querySelector('#audioIntro');
     easterEgg.addEventListener('click', function () {
-        audioEgg.play()
+       // audioEgg.play()
+
+        let video = document.querySelector("video")
+        video.style.display = ""
+        setInterval(() => {
+                video.style.opacity = video.style.opacity += 0.1 
+            
+
+        },1200);
+    
+
+    video.addEventListener("click",()=>{
+        video.play()
+    })
     })
 }
 sorpresa()
+
