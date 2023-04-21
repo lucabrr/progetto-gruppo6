@@ -83,6 +83,9 @@ const COLOR_CODES = {
 
 let remainingPathColor = COLOR_CODES.info.color;
 
+//funzione che viene eseguita all'entrata nella sezione del questionario
+//deposito in un array globale il risultato del fetch, in modo da poterlo usare nelle altre funzioni
+//infine avvio la funzione buildQuiz che si occuperà di strutturare la pagina
 async function getQuestions() {
   let containerDomanda = document.getElementById('contenitoreDomanda');
   let target = document.getElementById('contenitoreRisposte');
@@ -101,6 +104,7 @@ async function getQuestions() {
   })
 }
 
+//funzione che anima il logo al refresh delle domande
 function animLogo() {
   let logo = document.querySelector('.nav img');
   if (!logo.classList.contains('animate-logo')) {
@@ -111,6 +115,7 @@ function animLogo() {
   }
 }
 
+//qui aggiungiamo gli eventi click ai vari pulsanti delle risposte
 function addBtnsEvents() {
   let target = document.getElementById('contenitoreRisposte');
   let risposte_1 = target.querySelector('.risposte-1');
@@ -135,6 +140,8 @@ function addBtnsEvents() {
   }
 }
 
+//qui la funzione che controlla la correttezza delle domande e salva il risultato nel localStorage
+//infine si lancia nuovamente la funzione buildQuiz che ricostruisce la pagina con la nuova domanda
 function doBtnEvents(ind, num) {
   let actualAnswer = "";
   if (ind == 1) {
@@ -182,8 +189,9 @@ function shuffle(array) {
       onTimesUp();
       document.getElementById('div-quiz').remove();
       setIntermezzoQuizResult();
-      
+      //questa funzione viene eseguita al termine del questionario. Lancia la funzione per costruire la pagina successiva
     } else {
+      //qui invece si costruisce il quiz
       let containerDomanda = document.getElementById('contenitoreDomanda');
       let target = document.getElementById('contenitoreRisposte');
       let numDomanda = document.getElementById('numeroDomande');
@@ -212,6 +220,7 @@ function shuffle(array) {
       let shuffledSelectedQuestion = [];
   
       if (selectedQuestion.type == "boolean") {
+        //se la domanda contiene solo due risposte possibili
         tmpSelectedQuestion.push(selectedQuestion.correct_answer);
         tmpSelectedQuestion.push(selectedQuestion.incorrect_answers[0]);
         shuffledSelectedQuestion = shuffle(tmpSelectedQuestion);
@@ -235,6 +244,7 @@ function shuffle(array) {
         risposte_2.replaceChild(newB2, risposte_2.firstElementChild);
   
       } else {
+        //se la domanda contiene 4 risposte possibili
         let tmpSelectedQuestion = [];
         let shuffledSelectedQuestion = [];
   
@@ -416,7 +426,7 @@ function setIntermezzoQuizResult() {
     let resultTemplate = document.getElementsByTagName('template')[2];
     let cloneResult = resultTemplate.content.cloneNode(true);
     document.getElementById('div-result').append(cloneResult);
-    getValues();
+    setResultPage();
     inserisciValori();
     calcolaPercentuali();
     risultatoTest();
@@ -434,7 +444,7 @@ let sbagliate = 0;
 let percentCorrette;
 let percentSbagliate;
 
-function getValues() {
+function setResultPage() {
     corrette = localStorage.getItem("correctAnswers");
     sbagliate = localStorage.getItem("wrongAnswers");
     let btn = document.querySelector('.rateButton');
@@ -465,7 +475,6 @@ function getValues() {
       }
     });
   }
-
 
 function inserisciValori() {
   let numeroCorrette = document.getElementById("numeroCorrette")
