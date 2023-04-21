@@ -47,11 +47,6 @@
 
 
 
-
-
-
-
-
 // Qui sotto tutto il codice JS per il questionario
 
 let questionsArr = [];
@@ -395,7 +390,6 @@ function shuffle(array) {
 
 //script funzioni pagina intermezzo quiz-result
 
-
 function setIntermezzoQuizResult() {
   let intermezzoTemplate = document.getElementsByTagName('template')[1];
   let cloneIntermezzo = intermezzoTemplate.content.cloneNode(true);
@@ -435,9 +429,7 @@ function setIntermezzoQuizResult() {
 
 
 
-
-
-  // qui sotto lo script JS per la pagina Results
+// qui sotto lo script JS per la pagina Results
 
 let domande = 10
 let corrette = 0;
@@ -521,13 +513,8 @@ function risultatoTest() {
 
 
 
-
-
-
-
-
-  // qui sotto il codice JS per la pagina Review
-  let starsArr = [];
+// qui sotto il codice JS per la pagina Review
+let starsArr = [];
 
   function reviewInit() {
     starsArr = document.querySelectorAll('.stars-container svg');
