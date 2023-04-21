@@ -21,11 +21,8 @@
     // aggiungo l'evento alla checkbox in modo che al moment. della compilazione il messaggio sparisca
     checkB.addEventListener('click', () => {
         if (checkB.checked == true) {
-            document.getElementById('mostraAvviso');
-        } if (checkB.checked == true) {
             document.getElementById('avviso').classList.add('mostraAvviso')
         }
-
     })
 
     let easterEgg = document.querySelector('#easter');
