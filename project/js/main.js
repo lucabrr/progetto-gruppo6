@@ -104,11 +104,9 @@ async function getQuestions() {
 function animLogo() {
   let logo = document.querySelector('.nav img');
   if (!logo.classList.contains('animate-logo')) {
-    console.log('no');
     logo.classList.add('animate-logo');
     return true;
   } else {
-    console.log('si');
     logo.classList.remove('animate-logo');
   }
 }
@@ -183,18 +181,8 @@ function shuffle(array) {
     if (shuffledquestionsArr.length == 0) {
       onTimesUp();
       document.getElementById('div-quiz').remove();
-      //build the result page
-
-      setTimeout(function() {
-        //mik video corriere
-        let resultTemplate = document.getElementsByTagName('template')[1];
-        let cloneResult = resultTemplate.content.cloneNode(true);
-        document.getElementById('div-result').append(cloneResult);
-        getValues();
-        inserisciValori();
-        calcolaPercentuali();
-        risultatoTest();
-      }, 500)
+      setIntermezzoQuizResult();
+      
     } else {
       let containerDomanda = document.getElementById('contenitoreDomanda');
       let target = document.getElementById('contenitoreRisposte');
@@ -205,7 +193,7 @@ function shuffle(array) {
       target.style.opacity = 0;
       numDomanda.style.opacity = 0;
       timer.style.opacity = 0;
-      animLogo(false);
+      animLogo();
   
       let risposte_1 = target.querySelector('.risposte-1');
       let risposte_2 = target.querySelector('.risposte-2');
@@ -397,7 +385,44 @@ function shuffle(array) {
   
 
 
+//script funzioni pagina intermezzo quiz-result
 
+
+function setIntermezzoQuizResult() {
+  let intermezzoTemplate = document.getElementsByTagName('template')[1];
+  let cloneIntermezzo = intermezzoTemplate.content.cloneNode(true);
+  let divInt = document.getElementById('intermezzo-welcome-quiz'); 
+  divInt.append(cloneIntermezzo);
+  let p1 = document.querySelector('.first-p');
+  let p2 = document.querySelector('.second-p');
+  setTimeout(function() {
+    p1.style.opacity = 1;
+  }, 1000);
+  setTimeout(function() {
+    p2.style.animation = "fadeIn 1.5s";
+    p2.style.opacity = 1;
+  }, 2500);
+
+  setTimeout(function() {
+    let vid = document.querySelector('.corriere');
+    p1.style.display = "none";
+    p2.style.display = "none";
+    vid.classList.remove('displayNone');
+    vid.play();
+  }, 5500);
+
+
+  setTimeout(function() {
+    divInt.remove();
+    let resultTemplate = document.getElementsByTagName('template')[2];
+    let cloneResult = resultTemplate.content.cloneNode(true);
+    document.getElementById('div-result').append(cloneResult);
+    getValues();
+    inserisciValori();
+    calcolaPercentuali();
+    risultatoTest();
+  }, 16000)
+}
 
 
 
@@ -418,7 +443,7 @@ function getValues() {
     let btn = document.querySelector('.rateButton');
     btn.addEventListener('click', function() {
         document.getElementById('div-result').remove();
-        let reviewTemplate = document.getElementsByTagName('template')[2];
+        let reviewTemplate = document.getElementsByTagName('template')[3];
         let cloneTemplate = reviewTemplate.content.cloneNode(true);
         let divTemplate = document.getElementById('div-review');
         divTemplate.append(cloneTemplate);
