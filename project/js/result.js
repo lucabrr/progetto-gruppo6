@@ -53,12 +53,15 @@ calcolaPercentuali()
 function risultatoTest() {
   let risultato = document.getElementById("complimenti")
   let descrizione = document.getElementById("descrizione")
-
+  let suonoBocciatura = document.getElementById("suonoBocciatura")
+  let suonoPromozione = document.getElementById("suonoPromozione")
   if (percentCorrette >= 60) {
+    suonoPromozione.play();
     risultato.textContent = "Congratualations!"
     descrizione.textContent = "you pass the exam!"
     risultato.style.color = "#00FFFF"
   } else {
+    suonoBocciatura.play();
     risultato.textContent = "We are sorry.."
     descrizione.textContent = "you didn't pass the exam.."
     risultato.style.color = "#C2128D"
