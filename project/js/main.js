@@ -83,7 +83,6 @@ const COLOR_CODES = {
 
 let remainingPathColor = COLOR_CODES.info.color;
 
-
 async function getQuestions() {
   let containerDomanda = document.getElementById('contenitoreDomanda');
   let target = document.getElementById('contenitoreRisposte');
@@ -100,6 +99,18 @@ async function getQuestions() {
     shuffledquestionsArr = shuffle(questionsArr);
     buildQuiz();
   })
+}
+
+function animLogo() {
+  let logo = document.querySelector('.nav img');
+  if (!logo.classList.contains('animate-logo')) {
+    console.log('no');
+    logo.classList.add('animate-logo');
+    return true;
+  } else {
+    console.log('si');
+    logo.classList.remove('animate-logo');
+  }
 }
 
 function addBtnsEvents() {
@@ -194,6 +205,7 @@ function shuffle(array) {
       target.style.opacity = 0;
       numDomanda.style.opacity = 0;
       timer.style.opacity = 0;
+      animLogo(false);
   
       let risposte_1 = target.querySelector('.risposte-1');
       let risposte_2 = target.querySelector('.risposte-2');
@@ -286,8 +298,8 @@ function shuffle(array) {
         target.style.opacity = 1;
         numDomanda.style.opacity = 1;
         timer.style.opacity = 1;
-      }, 600)
-  
+        animLogo();
+      }, 1000)
       addBtnsEvents();
     }
   }

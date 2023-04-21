@@ -10,6 +10,22 @@
   margin: 0 auto;
 }
 
+.animate-logo {
+  animation: zoom-in-zoom-out 1s ease infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(0.8, 0.8);
+  }
+  50% {
+    transform: scale(1.4, 1.4);
+  }
+  100% {
+    transform: scale(0.8, 0.8);
+  }
+}
+
 .nav img {
   width: 21.5%;
   margin: 50px 0px 0px 80px;
