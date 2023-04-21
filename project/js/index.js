@@ -31,8 +31,13 @@
 function sorpresa() {
     let easterEgg = document.querySelector('#easter');
     let audioEgg = document.querySelector('#audioIntro');
+    let videoEgg = document.querySelector('#videoIntro');
     easterEgg.addEventListener('click', function () {
         audioEgg.play()
+        setTimeout(function () {
+            videoEgg.classList.remove('scomparsa');
+            videoEgg.play();
+        }, 21000)
     })
 }
 sorpresa()

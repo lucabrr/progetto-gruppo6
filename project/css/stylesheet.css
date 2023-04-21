@@ -105,6 +105,17 @@
     text-decoration: underline;
 }
 
+#videoIntro {
+    height: 60%;
+    position: absolute;
+    top: 25%;
+    right: 25%;
+}
+
+.scomparsa {
+    display: none;
+}
+
 /* #contenuto{
     margin-bottom: 200px;
 } */
