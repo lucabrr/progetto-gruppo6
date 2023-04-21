@@ -491,7 +491,7 @@ function calcolaPercentuali() {
     percentualeSbagliate.textContent = percentSbagliate.toFixed(1) + "%"
   }
 
-  function risultatoTest() {
+function risultatoTest() {
     let risultato = document.getElementById("complimenti")
     let descrizione = document.getElementById("descrizione")
   
@@ -504,7 +504,7 @@ function calcolaPercentuali() {
       descrizione.textContent = "you didn't passed the exam.."
       risultato.style.color = "#C2128D"
     }
-  }
+}
 
 
 
@@ -553,5 +553,21 @@ function setForm() {
         e.preventDefault();
         const commentiInput = document.querySelector('.user-review');
         localStorage.setItem('feedback', commentiInput.value);
+        
+        let divRev = document.getElementById('div-review');
+        divRev.remove();
+        let divGrazie = document.getElementById('div-grazie');
+        let grazieTemplate = document.getElementsByTagName('template')[4];
+        let cloneTemplate = grazieTemplate.content.cloneNode(true);
+        divGrazie.append(cloneTemplate);
+        let p1 = document.querySelector('.first-p');
+        let p2 = document.querySelector('.second-p');
+        setTimeout(function() {
+          p1.style.opacity = 1;
+        }, 1000);
+        setTimeout(function() {
+          p2.style.animation = "fadeIn 1.5s";
+          p2.style.opacity = 1;
+        }, 2500);
     })
 }
