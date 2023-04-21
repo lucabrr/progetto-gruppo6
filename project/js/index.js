@@ -38,6 +38,12 @@ function sorpresa() {
             videoEgg.classList.remove('scomparsa');
             videoEgg.play();
         }, 21000)
+        setTimeout(function () {
+            videoEgg.classList.add('scomparsa');
+
+        }, 35000)
+
+
     })
 }
 sorpresa()
