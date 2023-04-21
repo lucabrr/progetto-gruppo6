@@ -4,7 +4,7 @@
 #mainContainer {
     background-image: url(../assets/bg.jpg);
     background-size: cover;
-    height: 100%;
+    height: 100vh;
     color: rgb(234, 234, 234);
 }
 

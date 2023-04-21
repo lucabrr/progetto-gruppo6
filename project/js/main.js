@@ -7,7 +7,7 @@
         if (checkB.checked) {
             document.querySelector('.container').remove();
             //build quiz
-            let quizTemplate = document.getElementsByTagName('template')[0];
+            let quizTemplate = document.getElementsByTagName('template')[0];      //qui viene creata la pagina dei quiz tramite template
             let cloneQuiz = quizTemplate.content.cloneNode(true);
             document.getElementById('div-quiz').append(cloneQuiz);
             getQuestions();
@@ -24,7 +24,7 @@
             document.getElementById('avviso').classList.add('mostraAvviso')
         }
     })
-
+  // Easteregg x michele
     let easterEgg = document.querySelector('#easter');
     let audioEgg = document.querySelector('#audioIntro');
     let videoEgg = document.querySelector('#videoIntro');
@@ -47,7 +47,7 @@
 // Qui sotto tutto il codice JS per il questionario
 
 let questionsArr = [];
-let shuffledquestionsArr = [];
+let shuffledQuestions = [];
 let selectedQuestion = {};
 let counterQuestions = 0;
 let correctAnswers = 0;
@@ -99,7 +99,7 @@ async function getQuestions() {
   fetch('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy').then(async function (res) {
     let json = await res.json();
     questionsArr = json.results;
-    shuffledquestionsArr = shuffle(questionsArr);
+    shuffledQuestions = shuffle(questionsArr);
     buildQuiz();
   })
 }
@@ -185,7 +185,7 @@ function shuffle(array) {
   }
   
   function buildQuiz() {
-    if (shuffledquestionsArr.length == 0) {
+    if (shuffledQuestions.length == 0) {
       onTimesUp();
       document.getElementById('div-quiz').remove();
       setIntermezzoQuizResult();
@@ -205,11 +205,11 @@ function shuffle(array) {
   
       let risposte_1 = target.querySelector('.risposte-1');
       let risposte_2 = target.querySelector('.risposte-2');
-      let random = Math.floor(Math.random() * (shuffledquestionsArr.length));
+      let random = Math.floor(Math.random() * (shuffledQuestions.length));
       let primo_titolo = document.querySelector('.prima-parte');
-      selectedQuestion = shuffledquestionsArr[random];
+      selectedQuestion = shuffledQuestions[random];
   
-      primo_titolo.innerHTML = shuffledquestionsArr[random].question;
+      primo_titolo.innerHTML = shuffledQuestions[random].question;
       onTimesUp();
       timePassed = 0;
       timeLeft = 60;
@@ -289,7 +289,7 @@ function shuffle(array) {
       }
       counterQuestions++;
       numDomanda.innerHTML = `QUESTION ${counterQuestions} <span id="domandeRimaste">&nbsp;/ 10</span>`;
-      shuffledquestionsArr.splice(random, 1);
+      shuffledQuestions.splice(random, 1);
   
       setTimeout(function () {
         containerDomanda.style.opacity = 1;
