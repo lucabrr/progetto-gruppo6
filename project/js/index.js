@@ -41,7 +41,7 @@ function sorpresa() {
         setTimeout(function () {
             videoEgg.classList.add('scomparsa');
 
-        }, 35000)
+        }, 34500)
 
 
     })
