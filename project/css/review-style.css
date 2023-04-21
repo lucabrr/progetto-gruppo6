@@ -109,3 +109,7 @@ form {
     color: rgb(62, 62, 62);
     box-shadow: 1px 1px 9px 5px #00FFFF;
 }
+
+.scomparsa {
+    display: none;
+}
